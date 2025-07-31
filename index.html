@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Japonya Depreminin Küresel Etkileri</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Ankara_skyline_from_Kocatepe_Mosque.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4a1c1c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffffdd;
+            margin-top: 60px;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 700px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #b71c1c;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #880e4f;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: #ad1457;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .buttons {
+            margin-top: 40px;
+            position: relative;
+            height: 100px;
+        }
+        .yes-btn {
+            background-color: #e53935;
+            color: white;
+            font-size: 24px;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .yes-btn:hover {
+            background-color: #c62828;
+        }
+        .no-btn {
+            position: absolute;
+            background-color: #ffcdd2;
+            color: #880e4f;
+            font-size: 12px;
+            padding: 5px 15px;
+            border: none;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Japonya Depreminin Küresel Etkileri</h1>
+        <h2>Tarih: 02.08.2025 - Yer: Ankara</h2>
+        <p>Konferansımıza katılarak şu konular üzerine eşsiz bilgiler öğrenebilirsiniz:</p>
+        <h3>• Alanında Uzman Konuşmacılar (Sadece ben 😄)</h3>
+        <h3>• Depremin Sosyolojik Karşılığı Üzerinde Değerlendirme (Yalan)</h3>
+        <h3>• Alınabilecek Önlemler (Sallama tamamen 😄)</h3>
+        <div class="buttons">
+            <button class="yes-btn">Kabul Ediyorum</button>
+            <button class="no-btn" id="noBtn">Kabul Etmiyorum</button>
+        </div>
+    </div>
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const container = document.querySelector('.buttons');
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (container.clientWidth - noBtn.clientWidth);
+            const y = Math.random() * (container.clientHeight - noBtn.clientHeight);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
